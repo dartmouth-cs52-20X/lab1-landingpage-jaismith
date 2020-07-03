@@ -1,0 +1,132 @@
+/* * IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* * VARIABLES */
+
+:root {
+  --border-color: rgba(0, 0, 0, 0.125);
+  --content-color: rgb(51, 51, 51);
+  --content-color-inverted: rgb(232, 232, 232);
+  --page-highlight-color: rgb(222, 241, 231);
+  --border-highlight-color: rgb(92, 193, 141);
+  --content-highlight-color: rgb(170, 217, 188);
+  --font-serif: 'PT Serif';
+  --font-sans-serif: 'PT Sans';
+  --font-mono: 'PT Mono';
+  --section-small-width: 475px;
+  --section-medium-width: 804px;
+  --section-full-width: 100%;
+}
+
+/* * ELEMENTS */
+
+html { 
+  font-family: var(--font-sans-serif), sans-serif;
+  color: var(--content-color);
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.45;
+  font-size: 1.25em;
+}
+
+section { 
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--border-color);
+  padding: 0 104px 0 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+section.highlight {
+  background: var(--page-highlight-color);
+  border-bottom-color: var(--border-highlight-color);
+}
+
+/* * GENERAL CLASSES */
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.serif {
+  font-family: var(--font-serif), serif;
+}
+
+.code {
+  font-family: var(--font-mono);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1em;
+  background: rgb(64, 64, 64);
+  padding: 1.25rem;
+  border-radius: 3px;
+  width: 675px;
+  margin: 2rem 0 -1.5rem 0;
+  color: var(--content-color-inverted);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.code span:nth-child(n + 2) {
+  margin-top: 5px;
+}
+
+.command:before {
+  content: '$ ';
+}
+
+.comment {
+  opacity: 0.5;
+}
+
+.comment:before {
+  content: '# ';
+}
+
+.small {
+  width: var(--section-small-width);
+}
+
+.medium {
+  width: var(--section-medium-width);
+}
+
+.full {
+  width: var(--section-full-width);
+}
+
+/* * SECTION-SPECIFIC CLASSES */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--section-medium-width);
+}
+
+.nav-left:nth-child(n + 1) {
+  margin-left: 20px;
+}
+
+.nav-right:nth-last-child(n + 1) {
+  margin-right: 20px;
+}
