@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>
       Timetable Scanner CLI
     </title>
@@ -19,7 +20,7 @@
           <a href="#setup">
             Setup
           </a>
-          <a>
+          <a href="#tools">
             Tools
           </a>
         </div>
@@ -95,10 +96,38 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="tools">
       <h2>
-        Tools we used
+        How it works
       </h2>
+      <div class="row">
+        <div class="tool">
+          <img class="tool-logo" src="./media/python.png" />
+          <p>
+            Timetable Scanner CLI is built in <a href="https://www.python.org/">Python3</a>. This allows us to easily parse the Timetable as pure strings without DOM queries.
+          </p>
+        </div>
+        <div class="tool">
+          <img class="tool-logo" src="./media/twilio.png" />
+          <p>
+            <a href="https://www.twilio.com/">Twilio</a> is a popular provider of communication APIs, including programmatic SMS. This allows us to text you as soon as we find an opening!
+          </p>
+        </div>
+        <div class="tool">
+          <img class="tool-logo" src="./media/requests.png" />
+          <p>
+            The <a href="https://requests.readthedocs.io/en/master/">Requests</a> library is what allows us to access the Timetable website and retrieve its data. This is an extremely popular and well-maintained library.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <a href="https://github.com/dartmouth-cs52-20X/lab1-landingpage-jaismith">
+        Site Repository
+      </a>
+      <a href="https://github.com/jaismith/Dartmouth_Timetable_Scanner_CLI">
+        Scanner Repository
+      </a>
     </section>
   </body>
 </html>
