@@ -3,42 +3,101 @@
   <head>
     <link rel="stylesheet" href="./stylesheet.css" />
     <title>
-      surge styling clone
+      Timetable Scanner CLI
     </title>
   </head>
   <body>
     <section class="highlight">
       <div class="nav">
-        <span>
-          Surge
-        </span>
-        <span>
+        <div class="nav-left">
+          <img class="logo" src="./media/dpine.png" />
           <span>
-            item
+            Scanner CLI
           </span>
-          <span>
-            item
-          </span>
-        </span>
+        </div>
+        <div class="nav-right">
+          <a href="#setup">
+            Setup
+          </a>
+          <a>
+            Tools
+          </a>
+        </div>
       </div>
-      <h1 class="serif">
-        This is a Surge replica
+      <h1 class="serif medium">
+        Timetable monitoring that works for <i>you</i>.
       </h1>
       <p class="small">
-        This is some content! I can write about what is on this site in the space here
+        Simple timetable monitoring for Dartmouth courses. Watch for seats in multiple classes and get SMS notifications, right from your terminal.
       </p>
-      <div class="code">
-        <span class="command">
-          somecommand
+      <div class="code overflow">
+        <span class="command type">
+          python3 setup.py
         </span>
-        <span class="comment">
-          this command will output some stuff
-        </span>
+        <div class="fade-in">
+          <span class="comment fade-in">
+          Got your eyes on a course? Let us know!
+          </span>
+          <span>
+            Running setup...
+          </span>
+          <span>
+            Number of courses you would like to track:
+          </span>
+        </div>
+        
+      </div>
+    </section>
+    <section class="split" id="setup">
+      <div class="row">
+        <div class="split-left">
+          <h2>
+            Easy to set up, with automatic package installation.
+          </h2>
+          <div class="code">
+            <span class="command">
+              python3 setup.py
+            </span>
+            <span>
+              Running setup...
+            </span>
+            <span>
+              Number of courses you would like to track: 1
+            </span>
+            <span>
+              CRN of course #0: 60388 
+            </span>
+            <span>
+              Department of course #0: COSC
+            </span>
+            <span>
+              Target term (numeric): 202006
+            </span>
+            <span>
+              Interval between scans (in seconds): 30
+            </span>
+            <span>
+              Enable text notifications? (y/n): n
+            </span>
+            <span class="comment">
+              Now, start the scanner!
+            </span>
+            <span class="command">
+              python3 main.py
+            </span>
+            <span>
+              Current configuration: TERM: 202006, COURSES: [('COSC', '60388')]
+            </span>
+          </div>
+        </div>
+        <div class="split-right">
+          <img class="message" src="./media/message.png" />
+        </div>
       </div>
     </section>
     <section>
       <h2>
-        This is some more info :)
+        Tools we used
       </h2>
     </section>
   </body>
