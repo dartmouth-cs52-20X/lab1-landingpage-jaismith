@@ -1,6 +1,6 @@
 # Scanner CLI Landing Page
 
-This site is a clone of [surge.sh](https://surge.sh). I copied the basic stylistic elements, as well as fonts and colors, and generalized it for use with my own content. This demo site is about a timetable scanner CLI I worked on in freshman year, which felt appropriate since the actual surge site is advertising a CLI as well!
+This site is a clone of [surge.sh](https://surge.sh). I copied the basic stylistic elements, as well as fonts and colors, and generalized it for use with my own content. This demo site is about a timetable scanner CLI I made freshman year, which felt appropriate since the actual surge site is advertising a CLI as well!
 
 [GitHub Pages](https://dartmouth-cs52-20x.github.io/lab1-landingpage-jaismith/index.html)
 
