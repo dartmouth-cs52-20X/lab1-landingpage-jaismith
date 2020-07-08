@@ -1,0 +1,295 @@
+/* * IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* * VARIABLES */
+
+:root {
+  --border-color: rgba(0, 0, 0, 0.125);
+  --content-color: rgb(51, 51, 51);
+  --content-color-inverted: rgb(232, 232, 232);
+  --page-highlight-color: rgb(222, 241, 231);
+  --border-highlight-color: rgb(92, 193, 141);
+  --content-highlight-color: rgb(170, 217, 188);
+  --font-serif: 'PT Serif';
+  --font-sans-serif: 'PT Sans';
+  --font-mono: 'PT Mono';
+  --section-small-width: 475px;
+  --section-medium-width: 804px;
+  --section-full-width: 100%;
+  --section-padding: 104px;
+}
+
+/* * ELEMENTS */
+
+html { 
+  font-family: var(--font-sans-serif), sans-serif;
+  color: var(--content-color);
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 425px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0.5rem 0 .5rem 0;
+}
+
+h1 i {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.45;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+section { 
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--border-color);
+  padding: 0 var(--section-padding) 0 var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+section.highlight {
+  background: var(--page-highlight-color);
+  border-bottom-color: var(--border-highlight-color);
+}
+
+a {
+  color: #5CC18D;
+  transition: color 0.3s;
+  cursor: grab;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--content-color);
+}
+
+/* * GENERAL CLASSES */
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.serif {
+  font-family: var(--font-serif), serif;
+}
+
+.code {
+  font-family: var(--font-mono);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1em;
+  background: rgb(64, 64, 64);
+  padding: calc(1.25rem - 5px) 1.25rem 1.25rem 1.25rem;
+  border-radius: 3px;
+  width: 675px;
+  margin: 2rem 0 2rem 0;
+  color: var(--content-color-inverted);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transform: translateY(-1rem);
+  transition: transform 0.6s ease-out;
+}
+
+.code span {
+  margin-top: 5px;
+}
+
+.code.overflow {
+  margin-bottom: -2.5rem;
+}
+
+/* based on https://css-tricks.com/snippets/css/typewriter-effect/ */
+.code span.type {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(60, end);
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.code div.fade-in {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fade-in 0.5s;
+  animation-delay: calc(0.75s + 1.5s);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.command:before {
+  content: '$ ';
+}
+
+.comment {
+  opacity: 0.5;
+}
+
+.comment:before {
+  content: '# ';
+}
+
+.small {
+  width: var(--section-small-width);
+}
+
+.medium {
+  width: var(--section-medium-width);
+}
+
+.full {
+  width: var(--section-full-width);
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* * SECTION-SPECIFIC CLASSES */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--section-medium-width);
+  margin-bottom: 2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 1.25em;
+}
+
+.nav-left :nth-child(n + 2) {
+  margin-left: 15px;
+}
+
+.nav-right :nth-last-child(n + 2) {
+  margin-right: 10px;
+}
+
+.logo {
+  width: 1.5em;
+}
+
+.split {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.split .code {
+  width: 85%;
+}
+
+.split-left {
+  width: 50%;
+}
+
+.split-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message {
+  width: 100%;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 0 2em 0 2em;
+}
+
+.tool-logo {
+  width: 100%;
+  height: 25%;
+  object-fit: contain;
+}
+
+.tool-name {
+  font-size: 2em;
+}
+
+.footer {
+  padding-bottom: 2em;
+}
+
+/* * MOBILE COMPATIBILITY */
+
+@media only screen and (max-width: 950px) {
+  :root {
+    --section-small-width: 75%;
+    --section-medium-width: 100%;
+    --section-padding: 50px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tool {
+    width: 100%;
+  }
+
+  .code {
+    width: 100%;
+  }
+
+  .split .code {
+    width: 100%;
+  }
+
+  .split-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .split-right {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}

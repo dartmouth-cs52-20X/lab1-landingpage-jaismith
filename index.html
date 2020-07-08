@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>
+      Timetable Scanner CLI
+    </title>
+  </head>
+  <body>
+    <section class="highlight">
+      <div class="nav">
+        <div class="nav-left">
+          <img class="logo" src="./media/dpine.png" />
+          <span>
+            Scanner CLI
+          </span>
+        </div>
+        <div class="nav-right">
+          <a href="#setup">
+            Setup
+          </a>
+          <a href="#tools">
+            Tools
+          </a>
+        </div>
+      </div>
+      <h1 class="serif medium">
+        Timetable monitoring that works for <i>you</i>.
+      </h1>
+      <p class="small">
+        Simple timetable monitoring for Dartmouth courses. Watch for seats in multiple classes and get SMS notifications, right from your terminal.
+      </p>
+      <div class="code overflow">
+        <span class="command type">
+          python3 setup.py
+        </span>
+        <div class="fade-in">
+          <span class="comment fade-in">
+          Got your eyes on a course? Let us know!
+          </span>
+          <span>
+            Running setup...
+          </span>
+          <span>
+            Number of courses you would like to track:
+          </span>
+        </div>
+        
+      </div>
+    </section>
+    <section class="split" id="setup">
+      <div class="row">
+        <div class="split-left">
+          <h2>
+            Easy to set up, with automatic package installation.
+          </h2>
+          <div class="code">
+            <span class="command">
+              python3 setup.py
+            </span>
+            <span>
+              Running setup...
+            </span>
+            <span>
+              Number of courses you would like to track: 1
+            </span>
+            <span>
+              CRN of course #0: 60388 
+            </span>
+            <span>
+              Department of course #0: COSC
+            </span>
+            <span>
+              Target term (numeric): 202006
+            </span>
+            <span>
+              Interval between scans (in seconds): 30
+            </span>
+            <span>
+              Enable text notifications? (y/n): n
+            </span>
+            <span class="comment">
+              Now, start the scanner!
+            </span>
+            <span class="command">
+              python3 main.py
+            </span>
+            <span>
+              Current configuration: TERM: 202006, COURSES: [('COSC', '60388')]
+            </span>
+          </div>
+        </div>
+        <div class="split-right">
+          <img class="message" src="./media/message.png" />
+        </div>
+      </div>
+    </section>
+    <section id="tools">
+      <h2>
+        How it works
+      </h2>
+      <div class="row">
+        <div class="tool">
+          <img class="tool-logo" src="./media/python.png" />
+          <p>
+            Timetable Scanner CLI is built in <a href="https://www.python.org/">Python3</a>. This allows us to easily parse the Timetable as pure strings without DOM queries.
+          </p>
+        </div>
+        <div class="tool">
+          <img class="tool-logo" src="./media/twilio.png" />
+          <p>
+            <a href="https://www.twilio.com/">Twilio</a> is a popular provider of communication APIs, including programmatic SMS. This allows us to text you as soon as we find an opening!
+          </p>
+        </div>
+        <div class="tool">
+          <img class="tool-logo" src="./media/requests.png" />
+          <p>
+            The <a href="https://requests.readthedocs.io/en/master/">Requests</a> library is what allows us to access the Timetable website and retrieve its data. This is an extremely popular and well-maintained library.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <a href="https://github.com/dartmouth-cs52-20X/lab1-landingpage-jaismith">
+        Site Repository
+      </a>
+      <a href="https://github.com/jaismith/Dartmouth_Timetable_Scanner_CLI">
+        Scanner Repository
+      </a>
+    </section>
+  </body>
+</html>
